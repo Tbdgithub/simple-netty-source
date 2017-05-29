@@ -13,6 +13,7 @@ public class EchoServerHandler extends SimpleChannelUpstreamHandler {
     @Override
     public void messageReceived(ChannelHandlerContext ctx, MessageEvent e) throws Exception {
         e.getChannel().write(e.getMessage());
+        System.out.println("messageReceived");
     }
 
     @Override
